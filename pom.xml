@@ -33,7 +33,18 @@
 
 	<properties>
 		<java.version>17</java.version>
+    <spring.boot.version>3.4.3</spring.boot.version>
 	</properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>${spring.boot.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
 	<dependencies>
 		<dependency>
