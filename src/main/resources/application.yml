@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: order-ms
+
+  data:
+    mongodb:
+      authentication-database: admin
+      auto-index-creation: true
+      database: ordermsdb
+      host: localhost
+      port: 27017
+      username: root
+      password: root
