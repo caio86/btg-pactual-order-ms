@@ -58,5 +58,9 @@
             '';
         };
       });
+
+      packages = forAllSystems (pkgs: {
+        order-ms = pkgs.callPackage ./nix/derivation.nix { };
+      });
     };
 }
