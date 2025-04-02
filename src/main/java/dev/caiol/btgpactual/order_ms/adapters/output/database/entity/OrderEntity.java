@@ -9,6 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.FieldType;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
+import dev.caiol.btgpactual.order_ms.application.domain.model.OrderDomain;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -31,4 +32,20 @@ public class OrderEntity {
   private BigDecimal total;
 
   private List<OrderItem> items;
+
+  public static OrderEntity fromDomain(OrderDomain domain) {
+    return new OrderEntity(
+        domain.getOrderId(),
+        domain.getCustomerId(),
+        domain.getTotal(),
+        domain.getItems().stream().map(OrderItem::fromItemDomain).toList());
+  }
+
+  public static OrderDomain toDomain(OrderEntity entity) {
+    return new OrderDomain(
+        entity.getOrderId(),
+        entity.getCustomerId(),
+        entity.getTotal(),
+        entity.getItems().stream().map(OrderItem::toItemDomain).toList());
+  }
 }
