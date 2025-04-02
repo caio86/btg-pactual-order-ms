@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class OrderItem {
+public class OrderItemDomain {
 
   private String product;
   private Integer quantity;

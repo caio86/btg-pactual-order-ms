@@ -18,7 +18,7 @@ public class OrderDomain {
   private long orderId;
   private long customerId;
   private BigDecimal total;
-  private List<OrderItem> items;
+  private List<OrderItemDomain> items;
 
   public void save(ISaveOrder saveOrder) {
     saveOrder.execute(this);

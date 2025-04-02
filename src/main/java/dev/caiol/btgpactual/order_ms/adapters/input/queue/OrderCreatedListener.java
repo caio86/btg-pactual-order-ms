@@ -7,7 +7,7 @@ import org.springframework.messaging.Message;
 import org.springframework.stereotype.Component;
 
 import dev.caiol.btgpactual.order_ms.application.domain.model.OrderDomain;
-import dev.caiol.btgpactual.order_ms.application.domain.model.OrderItem;
+import dev.caiol.btgpactual.order_ms.application.domain.model.OrderItemDomain;
 import dev.caiol.btgpactual.order_ms.application.ports.in.ISaveOrderUseCase;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -30,7 +30,7 @@ public class OrderCreatedListener {
         .customerId(payload.codigoCliente())
         .items(
             payload.itens().stream()
-                .map(item -> OrderItem.builder()
+                .map(item -> OrderItemDomain.builder()
                     .product(item.produto())
                     .quantity(item.quantidade())
                     .price(item.preco())
