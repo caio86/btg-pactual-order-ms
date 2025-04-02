@@ -1,6 +1,6 @@
 package dev.caiol.btgpactual.order_ms.application.usecase;
 
-import dev.caiol.btgpactual.order_ms.application.domain.OrderDomain;
+import dev.caiol.btgpactual.order_ms.application.domain.model.OrderDomain;
 import dev.caiol.btgpactual.order_ms.application.ports.in.ISaveOrderUseCase;
 import dev.caiol.btgpactual.order_ms.application.ports.out.ISaveOrder;
 import dev.caiol.btgpactual.order_ms.application.utils.UseCase;

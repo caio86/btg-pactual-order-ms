@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import dev.caiol.btgpactual.order_ms.adapters.output.database.entity.OrderEntity;
 import dev.caiol.btgpactual.order_ms.adapters.output.database.entity.OrderItem;
 import dev.caiol.btgpactual.order_ms.adapters.output.database.repository.OrderRepository;
-import dev.caiol.btgpactual.order_ms.application.domain.OrderDomain;
+import dev.caiol.btgpactual.order_ms.application.domain.model.OrderDomain;
 import dev.caiol.btgpactual.order_ms.application.ports.out.ISaveOrder;
 import lombok.AllArgsConstructor;
 

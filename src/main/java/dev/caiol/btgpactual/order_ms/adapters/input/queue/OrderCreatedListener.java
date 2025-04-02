@@ -6,8 +6,8 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.messaging.Message;
 import org.springframework.stereotype.Component;
 
-import dev.caiol.btgpactual.order_ms.application.domain.OrderDomain;
-import dev.caiol.btgpactual.order_ms.application.domain.OrderItem;
+import dev.caiol.btgpactual.order_ms.application.domain.model.OrderDomain;
+import dev.caiol.btgpactual.order_ms.application.domain.model.OrderItem;
 import dev.caiol.btgpactual.order_ms.application.ports.in.ISaveOrderUseCase;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

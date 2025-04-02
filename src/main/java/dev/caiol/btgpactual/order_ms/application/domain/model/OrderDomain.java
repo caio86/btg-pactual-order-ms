@@ -1,4 +1,4 @@
-package dev.caiol.btgpactual.order_ms.application.domain;
+package dev.caiol.btgpactual.order_ms.application.domain.model;
 
 import java.math.BigDecimal;
 import java.util.List;
